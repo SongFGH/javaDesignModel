@@ -23,6 +23,22 @@ public class Client {
         System.out.println("=======按下灯的关按钮===========");
         remoteController.offButtonWasPushed(0);
         System.out.println("=======按下灯的撤销按钮===========");
-        remoteController.undoButtonWasPushed(0);
+        remoteController.undoButtonWasPushed();
+
+
+
+        TVReceiver tvReceiver = new TVReceiver();
+        TVOnCommand tvOnCommand = new TVOnCommand(tvReceiver);
+        TVOffCommand tvOffCommand = new TVOffCommand(tvReceiver);
+
+        remoteController.setCommand(1,tvOnCommand,tvOffCommand);
+        System.out.println("=======按下电视机的开按钮===========");
+        remoteController.onButtonWasPushed(1);
+        System.out.println("=======按下电视机的关按钮===========");
+        remoteController.offButtonWasPushed(1);
+        System.out.println("=======按下电视机的撤销按钮===========");
+        remoteController.undoButtonWasPushed();
+
+
     }
 }

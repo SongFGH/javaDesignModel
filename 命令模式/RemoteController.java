@@ -43,7 +43,7 @@ public class RemoteController {
     }
 
     // 按下撤销按钮
-    public void undoButtonWasPushed(int no){
+    public void undoButtonWasPushed(){
         undoCommand.undo();
     }
 }
