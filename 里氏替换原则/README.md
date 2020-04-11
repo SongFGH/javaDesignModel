@@ -34,7 +34,6 @@ class B extends A {
         return func1(num1,num2) + 9;
     }
 }
-
 ```
 
 解决方案

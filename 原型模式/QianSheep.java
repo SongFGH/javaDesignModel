@@ -10,7 +10,6 @@ public class QianSheep implements Cloneable {
         this.name = name;
         this.age = age;
         this.color = color;
-
     }
 
     public String getName() {
